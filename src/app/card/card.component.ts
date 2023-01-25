@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ContactModel } from "../model/contact.model";
 
 @Component({
   selector: 'app-card',
@@ -6,20 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit{
-  image!:String
-  name!:String
-  firstname!:String
-  age!:number
-  address!:String
-  tel!:String
-  typeContract!:String
+  @Input()card!:ContactModel;
+
 
 ngOnInit(): void {
-  this.image="magalie.png"
-  this.age=31;
-  this.address="45, avenue de Neuilly, 59000 Lille"
-  this.tel="0678990878"
-  this.typeContract="fournisseur"
+  
+
 }
 
 
