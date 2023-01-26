@@ -56,7 +56,12 @@ export class Service {
     getContacts() : ContactModel[] {
         return this.contacts;
     }
-
     
-    
+    getContactById(id:number) : ContactModel {
+        const contact = this.contacts.find(x => x.id == id);
+        if(!contact) {
+            throw new Error("Aucun contact n'a été trouvé dans la base.");
+        }
+        return contact;
+    } 
 }
