@@ -1,0 +1,29 @@
+<div class="containerForm">
+    <form [formGroup]="addContactForm" class="addContactForm" (ngSubmit)="onSubmit()">
+        <h2>Ajout de contact</h2>
+        <label for="photo">URL de la photo : </label>
+        <input type="text" formControlName="photo">
+        <br>
+        <label for="firstname">Nom : </label>
+        <input type="text" formControlName="firstname">
+        <br>
+        <label for="lastname">Prénom : </label>
+        <input type="text" formControlName="lastname">
+        <br>
+        <label for="tel">Téléphone : </label>
+        <input type="text" formControlName="tel">
+        <br>
+        <label for="typeContact">Type fournisseur ou client : </label>
+        <input type="text" formControlName="contactType">
+        <br>
+        <div class="center">
+            <button type="submit" name="submit">Valider</button>
+        </div>
+    </form>
+
+    
+    <p>
+        <!-- pour déboguer le formulaire -->
+        Form Status: {{ addContactForm.status }}
+    </p>
+</div>

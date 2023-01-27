@@ -1,12 +1,12 @@
 
 <a (click)="navigateById()">
   <div class="card" [ngClass]="{
-    'supplier' : card.typeContract === 'fournisseur',
-    'client' : card.typeContract === 'client'
+    'supplier' : card.typeContact === 'fournisseur',
+    'client' : card.typeContact === 'client'
  }">
     <div class="CardHeader">
-      <img src="../../assets/{{card.image}}" alt="photo du contact" />
-      <h2>{{card.name}} {{card.firstname}}</h2>
+      <img src="../../assets/{{card.photo}}" alt="photo du contact" />
+      <h2>{{card.lastname}} {{card.firstname}}</h2>
     </div>
   </div>
 </a>
