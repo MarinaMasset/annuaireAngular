@@ -17,13 +17,19 @@ export class AddContactComponent {
     firstname: ['',[Validators.required]],
     lastname: ['',[Validators.required]],
     photo: ['',[Validators.required]],
-    contactType: ['',[Validators.required]],
+    typeContact: ['',[Validators.required]],
     tel:['', [Validators.pattern("((\\+|00)33|0) *[1-9]([ .-]*[0-9]{2}){4}")]]
   });
 }
 
 onSubmit():void {
   const contactData = this.addContactForm.value;
-  const contact = new ContactModel(); 
+  const contact = new ContactModel();
+  contact.id=9;
+  contact.firstname= contactData["firstname"];
+  contact.lastname= contactData["lastname"];
+  contact.photo= contactData["photo"];
+  contact.typeContact= contactData["typeContact"];
+  contact.tel= contactData["tel"];
 }
 }
